@@ -1,0 +1,167 @@
+/* style.css: the colors, fonts, and layout for the portfolio page */
+
+/* Colors used across the page. Change a value here to restyle the whole site. */
+:root {
+  --accent: #1f4e79;
+  --text: #222222;
+  --muted: #5f6b76;
+  --background: #f5f7fa;
+  --card: #ffffff;
+  --line: #dde3ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Page width and spacing between sections */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.tagline {
+  margin-top: 4px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  padding: 20px;
+  background: var(--card);
+  border-top: 6px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Contact */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.button {
+  padding: 10px 28px;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  background: #e9edf2;
+}
